@@ -1,4 +1,4 @@
-let pokemonlist = [
+let pokemonList = [
   {
     name: 'Butterfree',
     height: 1.1,
@@ -7,7 +7,7 @@ let pokemonlist = [
   },
   {
     name: 'Steelix',
-    height: 9,2,
+    height: 9.2,
     types: ['steel', 'ground'],
     abilities: ['rock-head', 'sheer-force'],
   },
