@@ -24,3 +24,14 @@ let pokemonList = [
     abilities: ['hyper-cutter', 'immunity'],
   },
 ]
+
+for (let i = 0; i < pokemonList.length; i++) {
+  //Writes Pokemon name to the DOM
+  document.write(pokemonList[i].name + " (height :" + pokemonList[i].height + ")")
+  // if pokemon height is greater than 2
+  if (pokemonList[i].height > 2) {
+  //if pokemon height is greater than 2, writes "Wow that's big!"
+    document.write(" - Wow, that's big!");
+  //Adds line breaks after each pokemon name
+  document.write("<br><br>");
+}
