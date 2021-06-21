@@ -25,7 +25,10 @@ let pokemonList = [
   },
 ]
 
-for (let i=0; i < pokemonList.length; i++) {
+pokemonList.forEach(function(pokemon) {
+  document.write('<p>' + pokemon.name + ' , ' + pokemon.height + ' , ' +  pokemon.types + ' , ' + pokemon.abilities + '</p>')
+})
+/*for (let i=0; i < pokemonList.length; i++) {
 //Writes Pokemon name to the DOM
   document.write(pokemonList[i].name + " (height :" + pokemonList[i].height + ")");
 //Checks if pokemon height is greater than 2
@@ -35,4 +38,4 @@ if (pokemonList[i].height > 2) {
 }
 //Adds line breaks after each pokemon name
 document.write("<br><br>");
-}
+}*/
