@@ -27,7 +27,7 @@ let pokemonRepository = (function (){
       abilities: ['hyper-cutter']
     },
 ];
-
+  //public functions add & getAll //
     function add(pokemon){
       pokemonList.push(pokemon);
     }
@@ -36,7 +36,6 @@ let pokemonRepository = (function (){
       return pokemonList;
     }
 
-//everything returned from the IIFE is accessible from the outside//
    return{
    getAll: getAll,
    add: add
@@ -50,12 +49,12 @@ let pokemonRepository = (function (){
       ) {
         pokemonList.push(pokemon);
       } else {
-        console.log("pokemon is not correct");
+        console.log("This is not a Pokemon");
       }
     }
 //Bonus Task: validate whether all Object.keys() of the parameter are equal to the specific keys//
   console.log(Object.keys(pokemonList));
-  
+
   console.log(pokemonRepository.getAll());
   pokemonRepository.add({name:'Arbok', height:'3.5', types:'poison', abilities:'unnerve'});
   console.log(pokemonRepository.getAll());
