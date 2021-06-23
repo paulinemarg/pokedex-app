@@ -4,26 +4,26 @@ let pokemonRepository = (function () {
     {
       name: 'Butterfree',
       height: 1.1,
-      types: ['bug'],
-      abilities: ['compoundeyes']
+      types: 'bug',
+      abilities: 'compoundeyes'
     },
     {
       name: 'Steelix',
       height: 9.2,
-      types: ['steel'],
-      abilities: ['sheer-force']
+      types: 'steel',
+      abilities: 'sheer-force'
     },
     {
       name: 'Jumpluff',
       height: 0.8,
-      types: ['grass'],
-      abilities: ['infiltrator']
+      types: 'grass',
+      abilities: 'infiltrator'
     },
     {
       name: 'Gligar',
       height: 1.1,
-      types: ['ground'],
-      abilities: ['hyper-cutter']
+      types: 'ground',
+      abilities: 'hyper-cutter'
     },
 ];
 
