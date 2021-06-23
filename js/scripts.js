@@ -67,7 +67,7 @@ let pokemonRepository = (function () {
   };
 })();
 
-pokemonRepository.add({ name:'Arbok', height:'3.5', types:'poison', abilities: 'unnerve' });
+pokemonRepository.add({ name:'Arbok', height: 3.5, types:'poison', abilities: 'unnerve' });
 
 console.log(pokemonRepository.getAll());
 
