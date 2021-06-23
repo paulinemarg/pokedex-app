@@ -1,7 +1,6 @@
 // wrapping the global variables within an IIFE //
-let pokemonRepository = (function (){
-
-  pokemonList = [
+let pokemonRepository = (function () {
+  let repository = [
     {
       name: 'Butterfree',
       height: 1.1,
@@ -27,53 +26,51 @@ let pokemonRepository = (function (){
       abilities: ['hyper-cutter']
     },
 ];
-  //public functions add & getAll //
-    function add(pokemon){
-      pokemonList.push(pokemon);
+
+
+  function add(pokemon) {
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "types" in pokemon
+    ) {
+      repository.push(pokemon);
+    } else {
+      console.log("pokemon is not correct");
     }
+  }
+  function getAll() {
+    return repository;
+  }
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list"); // variable assigned to <ul>
+    let listpokemon = document.createElement("li"); // variable creating a list item
+    let button = document.createElement("button"); // variable creating a button
+    button.addEventListener('click', function (event) { //adding event listener to the button
+            showDetails(pokemon);
+          });
+    button.innerText = pokemon.name; // assigning the button text to be the pokemon name
+    button.classList.add("button-class"); // adding class to the button
+    listpokemon.appendChild(button); // appending  the button to the list item
+    pokemonList.appendChild(listpokemon); // appending the list item to the unordered list
+  }
 
-    function getAll(){
-      return pokemonList;
-    }
+  function showDetails(pokemon) { //shows details of each pokemon in the console
+    console.log(pokemon);
+  }
 
-   return{
-   getAll: getAll,
-   add: add
-   }
+  return {
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem
+  };
 })();
 
-// Bonus Task: typeof parameter //
-    function add(pokemon) {
-      if (
-        typeof pokemon === "object"
-      ) {
-        pokemonList.push(pokemon);
-      } else {
-        console.log("This is not a Pokemon");
-      }
-    }
-//Bonus Task: validate whether all Object.keys() of the parameter are equal to the specific keys//
-  console.log(Object.keys(pokemonList));
+pokemonRepository.add({ name:'Arbok', height:'3.5', types:'poison', abilities: 'unnerve' });
 
-  console.log(pokemonRepository.getAll());
-  pokemonRepository.add({name:'Arbok', height:'3.5', types:'poison', abilities:'unnerve'});
-  console.log(pokemonRepository.getAll());
-  // forEach loop to iterate over an array of objects //
-  pokemonRepository.getAll().forEach(function(pokemon){
-  document.write('<p>' + pokemon.name + ' , ' + pokemon.height + ' , ' +  pokemon.types + ' , ' + pokemon.abilities + '</p>')
-  })
+console.log(pokemonRepository.getAll());
 
-/* pokemonList.forEach(function(pokemon) {
-  document.write('<p>' + pokemon.name + ' , ' + pokemon.height + ' , ' +  pokemon.types + ' , ' + pokemon.abilities + '</p>')
-})
-for (let i=0; i < pokemonList.length; i++) {
-//Writes Pokemon name to the DOM
-  document.write(pokemonList[i].name + " (height :" + pokemonList[i].height + ")");
-//Checks if pokemon height is greater than 2
-if (pokemonList[i].height > 2) {
-//if pokemon height is greater than 2, writes "Wow that's big!"
-  document.write(" - Wow, that's big!");
-}
-//Adds line breaks after each pokemon name
-document.write("<br><br>");
-}*/
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
