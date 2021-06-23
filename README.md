@@ -5,7 +5,7 @@ Building a small web app with **HTML**, **CSS** and **JS** that loads data from 
 The users should be able to view a list of data and see more details for a given data item on demand.
 
 ### Key Features
-* Load data from an external source @@(API).
+* Load data from an external source (API).
 * View a list of items
 * On user action (e.g., by clicking on a list item), view details for that item
 
