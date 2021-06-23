@@ -17,10 +17,11 @@ body {
  line-height: 1.2;
 }
 
-.page-header {
-  float:left;
-  width: 250px;
-  margin-right: 40px;
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #faf06c;
+  background-color: #69C3F3;
 }
 
 .button-class {
