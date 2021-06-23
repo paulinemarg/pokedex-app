@@ -15,6 +15,7 @@ body {
  font-weight: 400;
  font-size: 18px;
  line-height: 1.2;
+ margin: 0 auto;
 }
 
 .logo {
@@ -32,7 +33,7 @@ body {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: #faf06c;
-  color: #69C3F3;
+  background-color: #ffcb05;
+  color: #385fac;
   border: 2px solid black;
 }
