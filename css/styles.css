@@ -83,7 +83,7 @@ li {
   transform: translate(0,0.3rem);
   box-shadow: 0 0.1rem rgba(121,121,121,0.70);
 }
-.button:hover, .btn:hover {
+.button:hover {
   background-color: #385fac;
   color: #ffcb05;
 }
