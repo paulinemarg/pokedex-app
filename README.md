@@ -24,3 +24,7 @@ details or touch interactions.
 * HTML
 * CSS
 * Bootstrap
+
+
+
+https://paulinemarg.github.io/pokedex-app/
