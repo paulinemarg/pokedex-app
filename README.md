@@ -19,8 +19,8 @@ details or touch interactions.
 
 ### Built with
 
-***JavaScript
-jQuery
-HTML
-CSS
-Bootstrap***
+* JavaScript
+* jQuery
+* HTML
+* CSS
+* Bootstrap
