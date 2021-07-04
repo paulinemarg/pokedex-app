@@ -8,7 +8,7 @@ Button color: #69C3F3;
 
 */
 body {
-  background-color: #69C3F3;
+  background-color: #5881e9;
   color: #2b2b2b;
   font-family: 'Concert One', cursive;
   font-weight: 400;
@@ -39,17 +39,19 @@ h1 {
 .logo {
   max-width: 100%;
   height: auto;
-  text-align: center;
 }
 
 #logo-container {
   text-align: center;
+  padding-right: 40px;
 }
 
 /* pokemon list & button */
 .list-group {
-  text-align: center;
-  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 ul {
@@ -58,20 +60,20 @@ ul {
 }
 
 li {
+  flex: 1 1 0;
   padding-bottom: 10px;
 }
 
 .button {
-  padding: 20px;
+  padding: 30px;
   width: 300px;
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 700;
   margin: 0.25rem 0.125rem;
   transition-duration: 0.4s;
+  font-size: 18px;
+  font-weight: 700;
   cursor: pointer;
   background-color: #ffcb05;
   color: #385fac;
@@ -94,7 +96,7 @@ li {
 }
 
 .btn:hover {
-  background-color: #69C3F3;
+  background-color: #5881e9;
   color: #ffcb05;
 }
 
