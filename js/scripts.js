@@ -14,7 +14,7 @@ let pokemonRepository = (function() {
   function getAll() {
     return pokemonList;
   }
-  // Create button fr each pokemon in the pokemonList
+  // Create button for each pokemon in the pokemonList
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.list-group'); // variable assigned to <ul>
     let listItem = document.createElement('li'); // variable creating a list item
@@ -63,7 +63,7 @@ let pokemonRepository = (function() {
         return response.json();
       })
       .then(function(details) {
-        // Now we add the details to the item
+        // Add the details to the item
         item.imageUrlFront = details.sprites.front_default;
         item.imageUrlBack = details.sprites.back_default;
         item.height = details.height;
@@ -106,20 +106,19 @@ let pokemonRepository = (function() {
   function showModal(item) {
     let modalBody = $('.modal-body');
     let modalTitle = $('.modal-title');
-    let modalHeader = $('.modal-header');
 
     modalTitle.empty();
     modalBody.empty();
 
     let nameElement = $('<h1>' + item.name + '</h1>');
-    let imageElementFront = $('<img class="modal-img" style="width:50%">');
+    let imageElementFront = $('<img class="modal-img">');
     imageElementFront.attr('src', item.imageUrlFront);
-    let imageElementBack = $('<img class="modal-img" style="width:50%">');
+    let imageElementBack = $('<img class="modal-img">');
     imageElementBack.attr('src', item.imageUrlBack);
     let heightElement = $('<p>' + 'height : ' + item.height + '</p>');
     let weightElement = $('<p>' + 'weight : ' + item.weight + '</p>');
-    let typesElement = $('<p>' + 'types : ' + item.types + '</p>');
-    let abilitiesElement = $('<p>' + 'abilities : ' + item.abilities + '</p>');
+    let typesElement = $('<p>' + 'type : ' + item.types + '</p>');
+    let abilitiesElement = $('<p>' + 'ability : ' + item.abilities + '</p>');
 
     modalTitle.append(nameElement);
     modalBody.append(imageElementFront);
@@ -166,3 +165,24 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Dark and light theme
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+// loader
+document.onreadystatechange = function() {
+  setTimeout(function(){
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector(
+      "#loader").style.visibility = "visible";
+  } else {
+      document.querySelector(
+        "#loader").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+    }
+  }, 3000);
+};
