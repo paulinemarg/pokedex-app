@@ -61,11 +61,7 @@ body {
   cursor: pointer;
   background-color: #000;
   color: rgb(233, 203, 105);
-  border-radius: 16px 0px 16px 0px;
-}
-
-.d-flex input:hover {
-  border-radius: 0px 16px 0px 16px;
+  border-radius: 5px;
 }
 
 .search-form {
@@ -131,7 +127,6 @@ li {
 .button:hover {
   background-color: rgb(233, 203, 105);
   color: #000;
-  border-radius: 0px 16px 0px 16px;
 }
 
 .btn {
